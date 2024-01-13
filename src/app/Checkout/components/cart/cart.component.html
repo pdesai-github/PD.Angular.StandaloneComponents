@@ -1,0 +1,16 @@
+<div>
+    <app-navbar></app-navbar>
+</div>
+<div class="p-3">
+    @for (product of cartService.cartItems(); track $index) {
+    <div class="alert alert-secondary d-flex justify-content-between" role="alert">
+        <div>{{ product.name }}</div>
+        <div>{{ product.price }}</div>
+    </div>
+    }
+    <div class="alert alert-info d-flex justify-content-end">
+        <div>
+            <h3>Total cart value: {{ cartService.totalCartValue() }}</h3>
+        </div>
+    </div>
+</div>

@@ -18,7 +18,7 @@ export const routes: Routes = [
     },
     {
         path: "checkout",
-        loadChildren: () => import('./Checkout/cart/checkout.routes')
+        loadChildren: () => import('./Checkout/checkout.routes')
             .then(r => r.CHECKOUT_ROUTES)
     },
     {

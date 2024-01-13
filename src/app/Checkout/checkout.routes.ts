@@ -1,5 +1,5 @@
 import { Routes } from "@angular/router";
-import { CartComponent } from "./cart.component";
+import { CartComponent } from "./components/cart/cart.component";
 
 export const CHECKOUT_ROUTES: Routes = [
     {
