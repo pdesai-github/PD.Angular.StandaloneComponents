@@ -13,7 +13,11 @@
                 <li class="nav-item">
                     <a class="nav-link" [routerLink]="['/checkout']">Cart</a>
                 </li>              
-            </ul>          
+            </ul>     
+            <form class="d-flex" role="search">                
+                <button class="btn btn-danger" (click)="onLogout()" type="button">Logout</button>
+            </form>     
         </div>
+      
     </div>
 </nav>

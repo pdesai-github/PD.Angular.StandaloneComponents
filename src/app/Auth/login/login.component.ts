@@ -14,7 +14,8 @@ export class LoginComponent {
 
   router: Router = inject(Router);
 
-  username: string = "";
+  username = "testuser";
+  password = "testpassword";
 
   onLogin(): void {
     let user: User = {

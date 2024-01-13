@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
+import { CartService } from '../../../Checkout/services/cart/cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,4 +11,12 @@ import { RouterLink } from '@angular/router';
 })
 export class NavbarComponent {
 
+  router = inject(Router);
+  cartService = inject(CartService);
+
+  onLogout():void{
+    sessionStorage.removeItem("user");
+    this.cartService.clearCart();
+    this.router.navigate(["/auth"]);
+  }
 }
