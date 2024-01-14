@@ -17,13 +17,18 @@ export const routes: Routes = [
             .then(r => r.PRODUCT_ROUTES)
     },
     {
+        path: "version",
+        loadComponent: () => import('./core/components/version-info/version-info.component')
+            .then(c => c.VersionInfoComponent)
+    },
+    {
         path: "checkout",
         loadChildren: () => import('./Checkout/checkout.routes')
             .then(r => r.CHECKOUT_ROUTES)
     },
     {
         path: "",
-        pathMatch:"full",
+        pathMatch: "full",
         redirectTo: "auth"
     }
 ];
