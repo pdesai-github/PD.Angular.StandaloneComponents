@@ -8,7 +8,7 @@ export const routes: Routes = [
     },
     {
         path: "profile",
-        loadChildren: () => import('./User/profile/user.routes')
+        loadChildren: () => import('./User/user.routes')
             .then(r => r.USER_ROUTES)
     },
     {
